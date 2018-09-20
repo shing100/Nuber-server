@@ -1,0 +1,9 @@
+{
+  "name": "Nuber-server",
+  "version": "1.0.0",
+  "description": "우버서버 클론 개발",
+  "main": "index.js",
+  "repository": "https://github.com/shing100/Nuber-server.git",
+  "author": "limgeun <shing100@naver.com>",
+  "license": "MIT"
+}
