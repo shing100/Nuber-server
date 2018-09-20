@@ -5,5 +5,12 @@
   "main": "index.js",
   "repository": "https://github.com/shing100/Nuber-server.git",
   "author": "limgeun <shing100@naver.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.10.1",
+    "nodemon": "^1.18.4",
+    "ts-node": "^7.0.1",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.3"
+  }
 }
