@@ -13,3 +13,4 @@
 - yarn add helmet 보안 미들웨어
 - yarn add morgan cors
 - yarn add @types/cors, @types/morgan, @types helmet  --dev
+- yarn add graphql-tools merge-graphql-schemas
