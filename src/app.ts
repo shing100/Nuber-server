@@ -8,7 +8,7 @@ class App {
     // 실행 될때마다 수행
     constructor(){
         this.app = new GraphQLServer({
-
+            
         })
         this.middlewares();
     }
