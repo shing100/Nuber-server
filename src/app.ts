@@ -2,13 +2,14 @@ import { GraphQLServer } from "graphql-yoga";
 import cors from "cors";
 import helmet from "helmet";
 import logger from "morgan";
+import schema from "./schema";
 
 class App {
     public app : GraphQLServer;
     // 실행 될때마다 수행
     constructor(){
         this.app = new GraphQLServer({
-            
+            schema
         })
         this.middlewares();
     }
