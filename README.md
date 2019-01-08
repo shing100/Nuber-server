@@ -10,7 +10,13 @@
 ## install
 
 - yarn add graphql-yoga 
-- yarn add helmet 보안 미들웨어
+
+> 보안 미들웨어
+- yarn add helmet 
 - yarn add morgan cors
 - yarn add @types/cors, @types/morgan, @types helmet  --dev
 - yarn add graphql-tools merge-graphql-schemas
+
+> graphql typescript 연결 및 병합작업
+- yarn add graphql-to-typescript gql-merge --dev
+- yarn add babel-runtime --dev
