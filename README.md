@@ -24,10 +24,13 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
 
 > TypeOrm
 - https://github.com/typeorm/typeorm
+- https://github.com/typeorm/typeorm/blob/master/docs/decorator-reference.md#column
 - yarn add typeorm
 
-> postgres 연결
+> postgres 설치 및 컬럼 타입
 - yarn add pg
+- https://github.com/typeorm/typeorm/blob/master/docs/entities.md#column-types-for-postgres
+
 
 > .env 환경설정
 - yarn add dotenv
