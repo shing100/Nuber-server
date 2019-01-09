@@ -34,3 +34,10 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
 
 > .env 환경설정
 - yarn add dotenv
+
+> class validator
+- https://github.com/typestack/class-validator
+
+> 비밀번호 암호화
+- yarn add bcrypt
+- yarn add @types/bcrypt --dev
