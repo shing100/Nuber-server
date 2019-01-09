@@ -26,5 +26,8 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
 - https://github.com/typeorm/typeorm
 - yarn add typeorm
 
-> postgres
+> postgres 연결
 - yarn add pg
+
+> .env 환경설정
+- yarn add dotenv
