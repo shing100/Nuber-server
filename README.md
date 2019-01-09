@@ -1,4 +1,5 @@
 # Nuber-server
+TypeScript, graphql 를 이용하여 우버 서버 클론하기
 
 ## 초기 세팅
 - yarn add typescript ts-node nodemon --dev
@@ -7,7 +8,7 @@
     - https://github.com/DefinitelyTyped/DefinitelyTyped
     - yarn add @types/node --dev
 
-## install
+## install 및 참고 자료
 
 - yarn add graphql-yoga 
 
@@ -20,3 +21,10 @@
 > graphql typescript 연결 및 병합작업
 - yarn add graphql-to-typescript gql-merge --dev
 - yarn add babel-runtime --dev
+
+> TypeOrm
+- https://github.com/typeorm/typeorm
+- yarn add typeorm
+
+> postgres
+- yarn add pg
