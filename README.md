@@ -8,6 +8,18 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
     - https://github.com/DefinitelyTyped/DefinitelyTyped
     - yarn add @types/node --dev
 
+## Verification
+    v = Verification
+    v.target = phone
+    v.payload = +41434235
+    v.key = 3456
+
+    hello verify with the number 3456
+    인증번호 입력 3456
+    
+    v(payload:+41434235 , key:1234)
+    확인
+
 ## install 및 참고 자료
 
 - yarn add graphql-yoga 
