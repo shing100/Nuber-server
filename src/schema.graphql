@@ -6,7 +6,23 @@ type Place {
   address: String!
   isFav: Boolean!
   createdAt: String!
-  updatedAt: Stirng
+  updatedAt: String
+}
+
+type Ride {
+  id: Int!
+  status: String!
+  picUpAddress: String!
+  picUpLat: Float!
+  picUpLng: Float!
+  dropOffAddress: String!
+  dropOffLat: Float!
+  dropOffLng: Float!
+  price: Float!
+  distance: String!
+  duration: String!
+  createdAt: String!
+  updatedAt: String
 }
 
 type User {
