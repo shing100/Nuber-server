@@ -1,6 +1,23 @@
 # Nuber-server
 TypeScript, graphql 를 이용하여 우버 서버 클론하기
 
+## 기능
+- [ ] 회원가입 기능
+- [ ] 페이스북 로그인, 일반로그인 기능
+- [ ] 핸드폰 인증 기능
+- [ ] 유저 프로필 가져오기 / 수정하기
+- [ ] 장소 추가 / 수정 / 삭제 하기
+- [ ] 위치 / 방향 리포트
+- [ ] 근처 운전자 보기
+- [ ] 드라이빙 모드
+- [ ] Subscribe로 접근 운전자 확인
+- [ ] 탑승 요청하기
+- [ ] 근처 자동차 잡기
+- [ ] 요청 상태 확인 기능 / status
+- [ ] 실시간 채팅 기능
+- [ ] 탑승기록 확인 기능
+- [ ] 탑승 디테일
+
 ## 초기 세팅
 - yarn add typescript ts-node nodemon --dev
 - yarn add tslint-config-prettier --dev
