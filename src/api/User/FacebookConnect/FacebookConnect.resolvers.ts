@@ -1,5 +1,5 @@
 import { Resolvers } from '../../../types/resolvers';
-import { FacebookConnectMutationArgs, FacebookConnectResponse, Message } from '../../../types/graph';
+import { FacebookConnectMutationArgs, FacebookConnectResponse } from '../../../types/graph';
 import User from '../../../entities/User';
 
 
@@ -16,7 +16,7 @@ const resolvers: Resolvers = {
           return {
             ok: true,
             error: null,
-            token: "Comming soon"
+            token: "Comming soon aleardy"
           };
         }
       } catch (error) {
@@ -35,7 +35,7 @@ const resolvers: Resolvers = {
         return {
             ok: true,
             error: null,
-            token: "Comming soon"
+            token: "Comming soon created"
         }
       } catch (error) {
         return {
