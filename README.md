@@ -38,6 +38,10 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
     v(payload:+41434235 , key:1234)
     확인
 
+## twilio
+- https://www.twilio.com
+- 번호 구매 및 token 연결
+
 ## install 및 참고 자료
 
 - yarn add graphql-yoga 
