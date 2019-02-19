@@ -7,7 +7,7 @@ import app from "./app";
 import connectionOptions from "./ormConfig";
 
 
-
+// 서버 설정 .env 및 graphql endpoint 설정
 const PORT: number | string = process.env.PORT || 4000;
 const PLAYGROUND_ENDPOINT: string = "/playground";
 const GRAPHQL_ENDPOINT: string = "/graphql";
@@ -20,6 +20,7 @@ const appOptions: Options = {
 
 const handleAppStart = () => console.log(`Listening on port ${PORT}`);
 
+// connection
 createConnection(connectionOptions).then(() => {
     app.start(appOptions, handleAppStart);
 }).catch(error => console.log(error));

@@ -12,6 +12,7 @@ class App {
         });
         this.middlewares();
     }
+    // 미들웨어 사용 설정
     private middlewares = (): void => {
         this.app.express.use(cors());
         this.app.express.use(logger("dev"));

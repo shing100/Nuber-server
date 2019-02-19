@@ -1,5 +1,7 @@
 import { ConnectionOptions } from "typeorm";
 
+// 커넥션 옵션 설정
+// postgrs DB
 const connectionOptions: ConnectionOptions = {
     type: "postgres",
     database: "nuber",
