@@ -13,9 +13,18 @@ const resolvers: Resolvers = {
                 const existingVerification = await Verification.findOne({
                     payload: phoneNumber
                 });
+
+                // undefind 가 되는것을 막아줌
                 if (existingVerification) {
                     existingVerification.remove();
                 }
+                const newVerification = await Verification.create({
+                    payload: phoneNumber,
+                    target: "PHONE"
+                }).save();
+
+                //to do: 메세지 보내기
+
             } catch (error) {
                 return {
                     ok: false,
