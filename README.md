@@ -41,6 +41,8 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
 ## twilio
 - https://www.twilio.com
 - 번호 구매 및 token 연결
+- yarn add twilio
+- yarn add @types/twilio --dev
 
 ## install 및 참고 자료
 

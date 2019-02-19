@@ -98,6 +98,7 @@ class User extends BaseEntity {
         return `${this.firstName} ${this.lastName}`;
     }
 
+    // bcrypt 사용하여 패스워드 비교
     public comparePassword(password: string): Promise<Boolean>{
         return bcrypt.compare(password, this.password)
     }
