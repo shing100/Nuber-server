@@ -4,8 +4,8 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
 ## 기능
 - [x] 회원가입 기능
 - [x] 페이스북 로그인, 일반로그인 기능
-- [ ] jwt 생성
 - [ ] 핸드폰 인증 기능
+- [ ] jwt 생성
 - [ ] 유저 프로필 가져오기 / 수정하기
 - [ ] 장소 추가 / 수정 / 삭제 하기
 - [ ] 위치 / 방향 리포트
@@ -37,6 +37,10 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
     
     v(payload:+41434235 , key:1234)
     확인
+
+## twilio
+- https://www.twilio.com
+- 번호 구매 및 token 연결
 
 ## install 및 참고 자료
 
