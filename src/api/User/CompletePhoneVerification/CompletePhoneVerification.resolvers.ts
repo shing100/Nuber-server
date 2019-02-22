@@ -3,6 +3,8 @@ import { CompletePhoneVerificationMutationArgs, CompletePhoneVerificationRespons
 import Verification from "../../../entities/Verification";
 import User from "../../../entities/User";
 
+
+// 핸드폰 인증 완료
 const resolvers: Resolvers = {
     Mutation: {
         CompletePhoneVerification: async (_, args: CompletePhoneVerificationMutationArgs): Promise<CompletePhoneVerificationResponse> => {
