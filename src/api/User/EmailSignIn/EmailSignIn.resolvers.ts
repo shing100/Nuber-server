@@ -7,6 +7,7 @@ const resolvers: Resolvers = {
         EmailSignIn: async(_, args:EmailSignInMutationArgs): Promise<EmailSignInResponse> => {
             const { email, password } = args;
             try {
+                // 이메일 인증
                 const user = await User.findOne({ email });
                 if(!user){
                     return {
@@ -15,6 +16,7 @@ const resolvers: Resolvers = {
                         token: null
                     } 
                 }
+                // 비밀번호 체크
                 const checkPassword = await user.comparePassword(password);
                 if(checkPassword){
                     return {

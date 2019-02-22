@@ -11,6 +11,7 @@ const resolvers: Resolvers = {
     ): Promise<FacebookConnectResponse> => {
       const { fbId } = args;
       try {
+        // 페이스북 로그인
         const existingUser = await User.findOne({ fbId });
         if (existingUser) {
           return {
@@ -28,7 +29,8 @@ const resolvers: Resolvers = {
       }
 
       try {
-       await User.create({
+        // 페이스북 아이디가 없을 경우 생성
+        await User.create({
           ...args,
           profilePhoto: `http://graph.facebook.com/${fbId}/picture?type=square`
         }).save();
