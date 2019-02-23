@@ -80,3 +80,8 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
 
 > 인증 관련 자료
 - https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
+
+
+> JWT
+- yarn add jsonwebtoken
+- yarn add @types/jsonwebtoken --dev
