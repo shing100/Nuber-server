@@ -23,7 +23,7 @@ const resolvers: Resolvers = {
                     payload: phoneNumber,
                     target: "PHONE"
                 }).save();
-                console.log(newVerification);
+                //console.log(newVerification);
                 //to do: 메세지 보내기
                 await sendVerificationSMS(newVerification.payload, newVerification.key);
                 return {

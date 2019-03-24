@@ -1,6 +1,7 @@
 import { Resolvers } from '../../../types/resolvers';
 import { FacebookConnectMutationArgs, FacebookConnectResponse } from '../../../types/graph';
 import User from '../../../entities/User';
+import createJWT from 'src/utils/createJWT';
 
 
 const resolvers: Resolvers = {
@@ -14,10 +15,11 @@ const resolvers: Resolvers = {
         // 페이스북 로그인
         const existingUser = await User.findOne({ fbId });
         if (existingUser) {
+          const token = createJWT(existingUser.id);
           return {
             ok: true,
             error: null,
-            token: "Comming soon aleardy"
+            token
           };
         }
       } catch (error) {
@@ -30,14 +32,15 @@ const resolvers: Resolvers = {
 
       try {
         // 페이스북 아이디가 없을 경우 생성
-        await User.create({
+        const newUser = await User.create({
           ...args,
           profilePhoto: `http://graph.facebook.com/${fbId}/picture?type=square`
         }).save();
+        const token = createJWT(newUser.id)
         return {
             ok: true,
             error: null,
-            token: "Comming soon created"
+            token
         }
       } catch (error) {
         return {
