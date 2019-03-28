@@ -1,14 +1,17 @@
 import { Resolvers } from "../../../types/resolvers";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
     Query: {
-        GetMyProfile: async (_,_, {req}) => {
+        GetMyProfile: privateResolver(async (_,_, {req}) => {
             const { user } = req
             return {
                 ok: true,
                 error: null,
                 user
             }
-        }
+        })
     }
 }
+
+export default resolvers
