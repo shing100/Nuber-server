@@ -20,7 +20,9 @@
     "nodemon": "^1.18.4",
     "ts-node": "^7.0.1",
     "tslint-config-prettier": "^1.15.0",
-    "typescript": "^3.0.3"
+    "typescript": "^3.0.3",
+    "@types/mailgun-js": "^0.16.3",
+    "mailgun-js": "^0.22.0"
   },
   "scripts": {
     "predev": "yarn run types",
