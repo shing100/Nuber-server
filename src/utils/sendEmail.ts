@@ -1,7 +1,7 @@
 import Mailgun from "mailgun-js";
 
 const mailGunClient = new Mailgun({
-  apiKey: procces.env.MAILGUN_API_KEY || "",
+  apiKey: process.env.MAILGUN_API_KEY || "",
   domain: "sandbox19be5094f8f4471aac927f451b0b37db.mailgun.org"
 });
 
