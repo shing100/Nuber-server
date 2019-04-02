@@ -2,17 +2,13 @@ import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
 import { UpdateMyProfileMutationArgs } from "../../../types/graph";
 import User from "../../../entities/User";
+import cleanNullArgs from "../../../utils/cleanNullArgs";
 
 const resolvers: Resolvers = {
     Mutation: {
         UpdateMyProfile: privateResolver(async (_, args: UpdateMyProfileMutationArgs, { req }) => {
                 const user: User = req.user;
-                const notNull: any = {};
-                Object.keys(args).forEach(key => {
-                    if(args[key] !== null){
-                        notNull[key] = args[key];
-                    }
-                })
+                const notNull: any = cleanNullArgs(args)
                 if (notNull.password !== null) { // 👈🏻 Change from args to notNull
                     user.password = notNull.password; // 👈🏻 Same here
                     user.save();
