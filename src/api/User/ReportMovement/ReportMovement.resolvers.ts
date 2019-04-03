@@ -12,7 +12,9 @@ const resolvers: Resolvers = {
             try {
                 await User.update({id: user.id}, {...notNull})
                 // 위치를 업데이트하고 publish
-                pubSub.publish("driverUpdate", {DriversSubscription: user});
+                const updatedUser = await User.findOne({id: user.id})
+                // payload 에는 subscription 과 똑같은 이름이 있어야함
+                pubSub.publish("driverUpdate", { DriversSubscription: updatedUser});
                 return {
                     ok: true,
                     error: null

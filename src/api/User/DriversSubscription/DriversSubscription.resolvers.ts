@@ -1,11 +1,21 @@
+import { withFilter } from "graphql-yoga";
+import User from "../../../entities/User";
+
 const resolvers = {
-    Subscription: {
-        DriversSubscription: {
-            subscribe: (_, __, { pubSub }) => {
-                return pubSub.asyncIterator("driverUpdate")
+  Subscription: {
+    DriversSubscription: {
+        subscribe: withFilter(
+            (_, __, { pubSub }) => pubSub.asyncIterator("driverUpdate"), 
+            (payload, _, { context }) => {
+                //console.log(`this is coming from the ReportMovement Resolver`, payload);
+                //console.log(`Listening`,context);
+                const user: User = context.currentUser;
+                const { DriversSubscription : { lastLat: driverLastLat, lastLng: driverLastLng }} = payload;
+                const { lastLat: userLastLat, lastLng: userLastLng } = user
             }
-        }
+        )
     }
+  }
 };
 
 export default resolvers;
