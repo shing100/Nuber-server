@@ -10,16 +10,21 @@ class App {
     public app: GraphQLServer;
     public pubSub: any;
     constructor() {
-        // 실제에서는 다른 것을 써야함
+        // 실제에서는 다른 것을 써야함 ex) Redies or Memcached
         this.pubSub = new PubSub()
         this.pubSub.ee.setMaxListeners(99);
         this.app = new GraphQLServer({
             schema,
             // 모든 resolver로 이동
             context: req => {
+                // webSocket 커넥션 확인
+                //console.log(req)
+                // context = null , connection = {}
+                const { connection: { context = null } = {} } = req;
                 return {
                     req: req.request,
-                    pubSub: this.pubSub
+                    pubSub: this.pubSub,
+                    context
                 }
             }
         });
