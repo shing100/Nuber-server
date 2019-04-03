@@ -15,7 +15,7 @@ const resolvers: Resolvers = {
                 if(place){
                     if(place.userId === user.id) {
                         const notNull = cleanNullArgs(args);
-                        await Place.update({id: args.placeId} {...notNull});
+                        await Place.update({id: args.placeId}, {...notNull});
                         return {
                             ok: true,
                             error: null

@@ -6,7 +6,7 @@ import cleanNullArgs from "../../../utils/cleanNullArgs";
 
 const resolvers: Resolvers = {
     Mutation: {
-        ReportMovementResponse: privateResolver( async(_, args: ReportMovementMutationArgs, { req }): Promise<ReportMovementResponse> => {
+        ReportMovement: privateResolver( async(_, args: ReportMovementMutationArgs, { req }): Promise<ReportMovementResponse> => {
             const user:User = req.user;
             const notNull = cleanNullArgs(args);
             try {
