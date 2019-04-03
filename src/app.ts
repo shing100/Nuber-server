@@ -1,5 +1,5 @@
 import cors from "cors";
-import { GraphQLServer } from "graphql-yoga";
+import { GraphQLServer, PubSub } from "graphql-yoga";
 import helmet from "helmet";
 import logger from "morgan";
 import schema from "./schema";
@@ -8,13 +8,18 @@ import { NextFunction, Response } from "express";
 
 class App {
     public app: GraphQLServer;
+    public pubSub: any;
     constructor() {
+        // 실제에서는 다른 것을 써야함
+        this.pubSub = new PubSub()
+        this.pubSub.ee.setMaxListeners(99);
         this.app = new GraphQLServer({
             schema,
             // 모든 resolver로 이동
             context: req => {
                 return {
-                    req: req.request
+                    req: req.request,
+                    pubSub: this.pubSub
                 }
             }
         });
