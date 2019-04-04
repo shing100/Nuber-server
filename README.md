@@ -44,6 +44,33 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
 - yarn add twilio
 - yarn add @types/twilio --dev
 
+## API 설명
+
+### Place
+    AddPlace : 장소 추가
+    DeletePlace : 장소 삭제
+    EditPlace : 장수 수정
+    GetMyPlaces : 나의 위치 가져오기
+
+### Ride
+    GetNearbyRides: 근처 탑승자 가져오기
+    RequestRide : 탑승 요청하기
+
+### User
+    CompleteEmailVerification : 이메일 인증 완료
+    CompletePhoneVerification : 핸드폰 인증 완료
+    DriversSubscription : 운전자 구독하기
+    EmailSignIn : 이메일 로그인
+    EmailSignUp : 이메일 회원가입
+    FacebookConnect : 페이스북 로그인
+    GetMyProfile : 나의 프로필 가져오기
+    GetNearbyDrivers: 근처 운전자 가져오기
+    ReportMovement: 움직인 보고하기
+    RequestEmailVerification: 이메일 인증 요청하기
+    StartPhoneVerification: 핸드폰 인증하기
+    ToggleDrivingMode : 운전모드 토글
+    UpdateMyProfile: 나의 프로필 수정하기
+
 ## install 및 참고 자료
 
 - yarn add graphql-yoga 
@@ -80,7 +107,6 @@ TypeScript, graphql 를 이용하여 우버 서버 클론하기
 
 > 인증 관련 자료
 - https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
-
 
 > JWT
 - yarn add jsonwebtoken
