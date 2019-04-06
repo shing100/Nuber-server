@@ -11,7 +11,13 @@ const resolvers = {
                 //console.log(`Listening`,context);
                 const user: User = context.currentUser;
                 const { DriversSubscription : { lastLat: driverLastLat, lastLng: driverLastLng }} = payload;
-                const { lastLat: userLastLat, lastLng: userLastLng } = user
+                const { lastLat: userLastLat, lastLng: userLastLng } = user;
+                return (
+                  driverLastLat >= userLastLat - 0.05 &&
+                  driverLastLat <= userLastLat + 0.05 &&
+                  driverLastLng >= userLastLng - 0.05 &&
+                  driverLastLng <= userLastLng + 0.05
+                );
             }
         )
     }

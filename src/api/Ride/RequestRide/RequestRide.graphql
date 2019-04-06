@@ -4,7 +4,7 @@ type RequestRideResponse {
     ride: Ride
 }
 
-type Mutaion {
+type Mutation {
     RequestRide(
         pickUpAddress: String!
         pickUpLat: Float!
