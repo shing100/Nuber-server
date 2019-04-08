@@ -8,7 +8,7 @@ const resolvers: Resolvers = {
     Mutation: {
         RequestRide: privateResolver(async (_, args: RequestRideMutationArgs, {req, pubSub}): Promise<RequestRideResponse> => {
             const user: User = req.user;
-            if (!user.isRiding) {
+            if (!user.isRiding && !user.isDriving) {
                 try {
                     const ride: Ride = await Ride.create({ ...args, passenger: user}).save();
                     pubSub.publish("rideRequest", {NearbyRideSubscription: ride});
