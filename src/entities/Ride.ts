@@ -1,17 +1,17 @@
+import { rideStatus } from "src/types/types";
 import {
     BaseEntity,
     Column,
     CreateDateColumn,
     Entity,
-    PrimaryGeneratedColumn,
-    UpdateDateColumn,
+    JoinColumn,
     ManyToOne,
     OneToOne,
-    JoinColumn
-} from "typeorm";
-import { rideStatus } from "src/types/types";
-import User from "./User";
-import Chat from "./Chat";
+    PrimaryGeneratedColumn,
+    UpdateDateColumn
+  } from "typeorm";
+  import Chat from "./Chat";
+  import User from "./User";
 
 @Entity()
 class Ride extends BaseEntity {
