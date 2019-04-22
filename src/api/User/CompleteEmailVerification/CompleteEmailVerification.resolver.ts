@@ -1,8 +1,8 @@
-import { Resolvers } from "../../../types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
+import Verification from "src/entities/Verification";
 import User from "../../../entities/User";
 import { CompleteEmailVerificationMutationArgs, CompleteEmailVerificationResponse } from "../../../types/graph";
-import Verification from "src/entities/Verification";
+import { Resolvers } from "../../../types/resolvers";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
     Mutation: {

@@ -1,8 +1,8 @@
-import { Resolvers } from "../../../types/resolvers";
-import { EmailSignUpResponse, EmailSignUpMutationArgs } from "../../../types/graph";
 import User from "../../../entities/User";
-import createJWT from "../../../utils/createJWT";
 import Verification from "../../../entities/Verification";
+import { EmailSignUpMutationArgs, EmailSignUpResponse } from "../../../types/graph";
+import { Resolvers } from "../../../types/resolvers";
+import createJWT from "../../../utils/createJWT";
 import { sendVerificationEmail } from "../../../utils/sendEmail";
 
 const resolvers: Resolvers = {

@@ -1,8 +1,8 @@
+import Place from "../../../entities/Place";
+import User from "../../../entities/User";
+import { DeletePlaceMutationArgs, DeletePlaceResponse } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
-import User from "../../../entities/User";
-import { DeletePlaceResponse, DeletePlaceMutationArgs } from "../../../types/graph";
-import Place from "../../../entities/Place";
 
 
 const resolvers: Resolvers = {

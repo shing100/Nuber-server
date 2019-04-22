@@ -1,8 +1,8 @@
-import { Resolvers } from "../../../types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
-import { UpdateMyProfileMutationArgs } from "../../../types/graph";
 import User from "../../../entities/User";
+import { UpdateMyProfileMutationArgs } from "../../../types/graph";
+import { Resolvers } from "../../../types/resolvers";
 import cleanNullArgs from "../../../utils/cleanNullArgs";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
     Mutation: {

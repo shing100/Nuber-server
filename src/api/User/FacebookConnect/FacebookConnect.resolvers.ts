@@ -1,6 +1,6 @@
-import { Resolvers } from '../../../types/resolvers';
-import { FacebookConnectMutationArgs, FacebookConnectResponse } from '../../../types/graph';
 import User from '../../../entities/User';
+import { FacebookConnectMutationArgs, FacebookConnectResponse } from '../../../types/graph';
+import { Resolvers } from '../../../types/resolvers';
 import createJWT from "../../../utils/createJWT";
 
 
